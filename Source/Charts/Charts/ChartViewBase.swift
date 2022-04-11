@@ -502,6 +502,8 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             let entryIndex = set.entryIndex(entry: e)
             guard entryIndex <= Int(Double(set.entryCount) * chartAnimator.phaseX) else { continue }
 
+            highlight.dataIndex = entryIndex
+
             let pos = getMarkerPosition(highlight: highlight)
 
             // check bounds
